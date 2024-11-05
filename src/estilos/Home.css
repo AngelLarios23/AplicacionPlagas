@@ -1,0 +1,201 @@
+/* --------- Estilos Generales --------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* --------- Contenedor Principal --------- */
+  .container {
+    position: fixed;
+    padding: 20px;
+    border-radius: 1%;
+    margin: 1%;
+    background-color: #3c763d;
+    background-image: linear-gradient(62deg, #1b7e1e 0%, #657ceb 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #022903;
+  }
+  
+  .FondoPrincipal {
+    position: fixed;
+    padding: 10%;
+    border-radius: 10%;
+    margin: 10%;
+    background-color: #104d0b;
+    background-image: linear-gradient(62deg, #99cda9 0%, #4779e3 100%);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #000;
+  }
+  /* --------- Encabezado --------- */
+  header {
+    width: 100%;
+    background-color: #3c763d;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    padding: 12px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* --------- Cuerpo y Botones --------- */
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px; /* Añade espacio entre los botones */
+    margin-top: 25px; /* Añade espacio adicional arriba de los botones */
+  }
+  
+  .buttons a {
+    text-decoration: none;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #206134;
+    color: #000000;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .buttonaIA {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Añade espacio entre los botones */
+  }
+  
+  .buttonaIA a {
+    text-decoration: none;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #1e479f;
+    color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .buttons a:hover {
+    transform: scale(1.2);
+  }
+  .chart-container {
+    width: 95%; /* o más si es necesario */
+    max-width: 1400px; /* Incrementa el máximo ancho */
+    height: 900px; /* Aumentar la altura */
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .chart-container {
+      width: 100%;
+      height: 400px; /* Aumenta también en dispositivos móviles */
+    }
+  }
+  
+  /* --------- Alertas y Cuenta Regresiva --------- */
+  .countdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .alerta {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(156, 232, 185, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeIn 0.5s, fadeOut 0.5s 3s;
+  }
+  
+  /* --------- Estilos para la Gráfica --------- */
+  .chart-container {
+    width: 95%; /* Mantener un ancho dinámico */
+    max-width: 1400px; /* Puedes ajustar el ancho máximo según necesites */
+    height: 900px; /* Mantén un tamaño fijo */
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .chart-container {
+      width: 100%;
+      height: 400px; /* Aumenta también en dispositivos móviles */
+    }
+  }
+  
+  
+  /* --------- Animaciones --------- */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  /* --------- Estilos para la Gráfica --------- */
+  

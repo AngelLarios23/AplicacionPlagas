@@ -1,3 +1,13 @@
+# Pasos para utilizar programa
+### `npm install react-router-dom`
+### `npm install @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
+### `npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons`
+### `npm install react-router-dom`
+### `npm install dayjs`
+### `npm i`
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

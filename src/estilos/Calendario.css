@@ -1,0 +1,245 @@
+.calendar {
+    width: 100%; /* Cambia el ancho a 100% para dispositivos móviles */
+    max-width: 600px; /* Mantén un ancho máximo para pantallas más grandes */
+    margin: 20px auto; /* Margen superior e inferior */
+    font-family: 'Arial', sans-serif; /* Tipografía moderna */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    overflow: hidden; /* Para esconder el contenido que sobresalga */
+    background-color: #fefefe; /* Fondo blanco suave */
+    transition: transform 0.3s ease; /* Suavidad en la transformación */
+}
+
+/* Efecto hover en el contenedor */
+.calendar:hover {
+    transform: translateY(-5px); /* Elevación al pasar el ratón */
+}
+
+/* Encabezado del calendario */
+.calendar-header {
+    background: linear-gradient(135deg, #5b86e5, #36d1dc); /* Degradado atractivo */
+    color: #ffffff; /* Color del texto */
+    padding: 30px; /* Espaciado interno aumentado */
+    display: flex; /* Diseño flexible */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Alineación vertical */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra en el encabezado */
+}
+
+.calendar-header h2 {
+    margin: 0; /* Sin margen */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    font-weight: 600; /* Negrita */
+}
+
+/* Estilos de los botones de navegación */
+.calendar button {
+    background-color: #ffffff; /* Fondo blanco */
+    border: 2px solid #5b86e5; /* Borde azul */
+    color: #5b86e5; /* Color del texto */
+    font-weight: 600; /* Negrita */
+    font-size: 1.2rem; /* Tamaño de fuente aumentado */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px 25px; /* Espaciado interno aumentado */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Efecto hover para botones de navegación */
+.calendar button:hover {
+    background-color: #5b86e5; /* Fondo azul al pasar el ratón */
+    color: #ffffff; /* Texto blanco */
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Días de la semana */
+.days-of-week {
+    display: grid; /* Diseño en rejilla */
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+    background-color: #e0f7fa; /* Fondo azul muy claro */
+    padding: 10px 0; /* Espaciado interno */
+}
+
+.day-of-week {
+    font-weight: bold; /* Negrita */
+    color: #555; /* Color del texto */
+    text-align: center; /* Alineación central */
+    padding: 15px 0; /* Espaciado interno aumentado */
+    border-bottom: 3px solid #b2ebf2; /* Borde inferior */
+}
+
+/* Días del mes */
+.days-in-month {
+    display: grid; /* Diseño en rejilla */
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+}
+
+/* Día normal y vacío */
+.day,
+.empty-day {
+    padding: 20px; /* Espaciado interno aumentado */
+    text-align: center; /* Alineación central */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    border-radius: 10px; /* Bordes redondeados */
+    font-weight: 600; /* Negrita */
+}
+
+/* Días normales */
+.day {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Efecto hover para días */
+.day:hover {
+    background-color: #ffd54f; /* Amarillo brillante */
+    color: #5b86e5; /* Cambiar color de texto al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Día seleccionado */
+.day.selected {
+    background-color: #5b86e5; /* Azul vibrante */
+    color: #ffffff; /* Texto blanco */
+    border-radius: 50%; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Días vacíos al inicio */
+.empty-day {
+    background-color: #f0f4f8; /* Gris claro */
+}
+
+/* Animación de carga */
+.loading {
+    display: flex; /* Diseño flexible */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Altura completa */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    color: #5b86e5; /* Color azul */
+}
+
+/* Respuesta del calendario para pantallas pequeñas */
+@media (max-width: 600px) {
+    .calendar {
+        width: 90%; /* Ancho responsivo */
+    }
+    .calendar-header h2 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño en móviles */
+    }
+    .calendar button {
+        font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
+        padding: 10px 15px; /* Ajustar el padding en móviles */
+    }
+}
+
+.container {
+    position: fixed;
+    padding: 20px;
+    border-radius: 1%;
+    margin: 1%;
+    background-color: #3c763d;
+    background-image: linear-gradient(62deg, #1b7e1e 0%, #657ceb 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px solid #022903;
+}
+
+.FondoPrincipal {
+    position: fixed;
+    padding: 1%;
+    border-radius: 1%;
+    margin: 1%;
+    background-color: #104d0b;
+    background-image: linear-gradient(62deg, #99cda9 0%, #4779e3 100%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #000;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    gap: 5px; /* Añade espacio entre los botones */
+    margin-top: 25px; /* Añade espacio adicional arriba de los botones */
+}
+
+.buttons a {
+    text-decoration: none;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #206134;
+    color: #000000;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.buttonaIA {
+    max-width: 700px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px; /* Añade espacio entre los botones */
+}
+
+.buttonaIA a {
+    text-decoration: none;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #1e479f;
+    color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    transition: all 0..4s ease-in-out;
+
+
+  }
+  
+  .buttons a:hover {
+    transform: scale(1.2);
+  }
+  .chart-container {
+    width: 95%; /* o más si es necesario */
+    max-width: 1400px; /* Incrementa el máximo ancho */
+    height: 900px; /* Aumentar la altura */
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chart {
+    width: 100%;
+    height: 100%;
+  }
+  
