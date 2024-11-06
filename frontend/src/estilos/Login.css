@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Cambiar fuente para un aspecto más moderno */
+  }
+  
+  .App-header {
+    background-color: #b4edad7c; /* Fondo de la sección */
+    height: 100vh; /* Altura completa de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color de texto */
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .card {
+    width: 100%; /* Cambiar a 100% para un mejor ajuste en pantallas pequeñas */
+    max-width: 800px; /* Ancho máximo */
+    max-height: 80vh; /* Limita la altura máxima para evitar scroll */
+    border-radius: 1rem; /* Bordes redondeados para la tarjeta */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    overflow: hidden; /* Oculta el contenido que se desborda */
+  }
+  
+  .card img {
+    height: 100%; /* Altura de la imagen igual a la altura de la tarjeta */
+    width: 100%; /* Ancho de la imagen igual al ancho de la tarjeta */
+    object-fit: cover; /* Mantiene la proporción y recorta la imagen si es necesario */
+    border-radius: 1rem 0 0 1rem; /* Bordes redondeados a la izquierda */
+  }
+  
+  h5 {
+    letter-spacing: 1px; /* Espaciado en el texto del encabezado */
+    color: #393f81; /* Cambiar color del encabezado */
+  }
+  
+  .form-outline {
+    margin-bottom: 1rem; /* Espaciado entre campos de formulario */
+  }
+  
+  .form-control {
+    border: 1px solid #ccc; /* Borde más visible */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+  }
+  
+  .form-control:focus {
+    border-color: #3f20ed; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(63, 32, 237, 0.5); /* Sombra en foco */
+  }
+  
+  .btn {
+    background-color: #3f20ed; /* Color del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el botón */
+  }
+  
+  .btn:hover {
+    background-color: #4486e8; /* Color de fondo del botón al pasar el mouse */
+  }
+  
+  .small {
+    color: #cccccc; /* Color de texto para enlaces pequeños */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  .small:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+  }
+  
+  .card-body {
+    background-color: #fff; /* Fondo blanco para el contenido de la tarjeta */
+    border-radius: 0 0 1rem 1rem; /* Bordes redondeados en la parte inferior */
+  }
+  
+  .mb-5 {
+    margin-bottom: 2rem; /* Espaciado adicional en la parte inferior */
+  }
