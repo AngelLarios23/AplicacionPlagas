@@ -1,7 +1,6 @@
 # Pasos para utilizar programa (Dentro de Frontend "cd ./fronted")
 ### `npm install react-router-dom @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons react-router-dom dayjs sweetalert2 react-bootstrap bootstrap axios i`
 
-
 ### `npm install @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome`
 ### `npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons`
 ### `npm install react-router-dom`
@@ -12,9 +11,8 @@
 ### `npm i`
 
 # (Backend "cd ./backend")
-### `npm install express mongoose cors body-parser bcrypt jsonwebtoken nodemailer`
-
-
+### `npm install express mongoose cors body-parser bcrypt jsonwebtoken nodemailer multer`
+### `pip install tensorflow opencv-python numpy`
 
 
 # Getting Started with Create React App
