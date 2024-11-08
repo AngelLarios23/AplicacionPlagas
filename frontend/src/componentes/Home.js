@@ -1,18 +1,49 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Importa FontAwesomeIcon
-import { faHouse, faComments, faUsers, faCamera, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faComments, faCamera, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
 import { PieChart, ResponsiveContainer, Pie, Tooltip, Cell } from 'recharts';
 import '../estilos/Home.css';
 
 const data = [
-    { name: "Enero", value: 10 }
+    { name: "Dia 01", value: 10 },
+    { name: "Dia 02", value: 10 },
+    { name: "Dia 03", value: 10 },
+    { name: "Dia 04", value: 10 },
+    { name: "Dia 05", value: 10 },
+    { name: "Dia 06", value: 10 },
+    { name: "Dia 07", value: 10 },
+    { name: "Dia 08", value: 10 },
+    { name: "Dia 09", value: 10 },
+    { name: "Dia 10", value: 10 },
+    { name: "Dia 11", value: 10 },
+    { name: "Dia 12", value: 10 },
+    { name: "Dia 13", value: 10 },
+    { name: "Dia 14", value: 10 },
+    { name: "Dia 15", value: 10 },
+    { name: "Dia 16", value: 10 },
+    { name: "Dia 17", value: 10 },
+    { name: "Dia 18", value: 10 },
+    { name: "Dia 19", value: 10 },
+    { name: "Dia 20", value: 10 },
+    { name: "Dia 21", value: 10 },
+    { name: "Dia 22", value: 10 },
+    { name: "Dia 23", value: 10 },
+    { name: "Dia 24", value: 10 },
+    { name: "Dia 25", value: 10 },
+    { name: "Dia 26", value: 10 },
+    { name: "Dia 27", value: 10 },
+    { name: "Dia 28", value: 10 },
+    { name: "Dia 29", value: 10 },
+    { name: "Dia 30", value: 10 }
+
     // Agrega el resto de los datos aquí
   ];
   const COLORS = ['#ce93d8', '#5c6bc0', '#b39ddb', '#4dd0e1', '#f48fb1'];
 
 const Home = () => {
-    const [position, setPosition] = useState([21.8853, -102.2910]);
+
+  const [position, setPosition] = useState([21.8853, -102.2910]);
   const [showAlert, setShowAlert] = useState(false);
   const [countdown, setCountdown] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);

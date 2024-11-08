@@ -22,7 +22,7 @@ train_datagen = ImageDataGenerator(
 # Cargar imágenes de entrenamiento
 # Cambia la ruta con la ubicación de tus imágenes de entrenamiento
 train_generator = train_datagen.flow_from_directory(
-    './dataset/test',  # Reemplaza con la ruta de tus imágenes de entrenamiento
+    './dataset/train',  # Reemplaza con la ruta de tus imágenes de entrenamiento
     target_size=(img_width, img_height),  # Ajustar las imágenes al tamaño especificado
     batch_size=batch_size,  # Número de imágenes por lote
     class_mode='categorical'  # Para clasificación múltiple de clases

@@ -12,6 +12,10 @@
 
 # (Backend "cd ./backend")
 ### `npm install express mongoose cors body-parser bcrypt jsonwebtoken nodemailer multer`
+
+# Pasos paara usar la IA dentro Backend
+### `Descargar en windos Python 3.11`
+### `pip install --upgrade pip`
 ### `pip install tensorflow opencv-python numpy`
 
 
